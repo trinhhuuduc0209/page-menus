@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh Sách Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #1a0f07;
+      --paper: #2c1a0e;
+      --card: #3a2212;
+      --gold: #d4a843;
+      --gold-light: #f0c96a;
+      --red: #c0392b;
+      --cream: #f5e6c8;
+      --cream-dim: #c9aa7c;
+      --green: #4a7c59;
+      --teal: #2e7d7d;
+      --orange: #e07b39;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(ellipse at 20% 0%, rgba(212,168,67,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 100%, rgba(192,57,43,0.1) 0%, transparent 50%);
+      font-family: 'Be Vietnam Pro', sans-serif;
+      color: var(--cream);
+      min-height: 100vh;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+    .header {
+      text-align: center;
+      padding: 2.5rem 1rem 2rem;
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    .header::before {
+      content: '';
+      display: block;
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 1rem;
+    }
+
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      text-shadow: 0 4px 12px rgba(212,168,67,0.2);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .header p {
+      color: var(--cream-dim);
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+
+    /* MENU LIST */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .menu-card {
+      background: linear-gradient(135deg, var(--card) 0%, var(--paper) 100%);
+      border: 1px solid rgba(212, 168, 67, 0.3);
+      border-radius: 8px;
+      padding: 2rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+      box-shadow: 0 8px 24px rgba(212, 168, 67, 0.15);
+      background: linear-gradient(135deg, rgba(212,168,67,0.1) 0%, var(--card) 100%);
+    }
+
+    .menu-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--gold-light);
+    }
+
+    .menu-card p {
+      color: var(--cream-dim);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .menu-card .arrow {
+      color: var(--gold);
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(212, 168, 67, 0.2);
+      color: var(--cream-dim);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🍲 Menu Nhà Hàng</h1>
+      <p>Khám phá các thực đơn của chúng tôi</p>
+    </div>
+
+    <div class="menu-grid">
+      <a href="chi-hai-mien-tay/index.html" class="menu-card">
+        <h2>Chị Hai Miền Tây</h2>
+        <p>Thực đơn lẩu đêm - Những hương vị đặc sắc từ miền Tây, phục vụ đến khuya với các lựa chọn tươi ngon và đa dạng.</p>
+        <div class="arrow">→</div>
+      </a>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 - Các Menu Nhà Hàng</p>
+    </div>
+  </div>
+</body>
+</html>
